@@ -19,8 +19,8 @@
         </a>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="register.jsp">
-            <button>Register</button>
+            <button>Register </button>
         </a>
           </center>
-</body>>
+</body>
 </html>
