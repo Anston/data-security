@@ -39,6 +39,7 @@
     <![endif]-->
 </head>
 <body>
+<<<<<<< HEAD
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -112,3 +113,17 @@
 
 </body>
 </html>
+=======
+    </br></br></br></br></br></br></br>
+   <center>
+        <a href="login.jsp">
+            <button>Login </button>
+        </a>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="register.jsp">
+            <button>Register </button>
+        </a>
+          </center>
+</body>
+</html>
+>>>>>>> refs/remotes/origin/shawn
