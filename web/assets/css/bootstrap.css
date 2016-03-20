@@ -739,6 +739,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -1793,6 +1794,9 @@ fieldset[disabled] .checkbox,
 fieldset[disabled] .checkbox-inline {
   cursor: not-allowed;
 }
+
+
+
 .input-sm {
   height: 30px;
   padding: 5px 10px;
