@@ -39,7 +39,6 @@
     <![endif]-->
 </head>
 <body>
-<<<<<<< HEAD
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -53,17 +52,17 @@
                 <a class="navbar-brand" href="">DIVIDED PASSWORD HASHING </a>
             </div>
             <!-- Collect the nav links for toggling -->
-          //  <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home">HOME</a>
+                    <li><a href="homepage.jsp">HOME</a>
                     </li>
-                    <li><a href="#about">LOGIN</a>
+                    <li><a href="login.html">LOGIN</a>
                     </li>
-                    <li><a href="#services">REGISTRATION</a>
+                    <li><a href="register.jsp">REGISTRATION</a>
                     </li>
                     
                 </ul>
-            </div>//
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -76,13 +75,13 @@
         <div class="row text-center ">
              <div class="col-md-3 head-main ">             
                             <i class="fa fa-bell color-blue "></i>
-                         <h3>  <a href="#home">HOME</a></h3>
+                         <h3>  <a href="# ">HOME</a></h3>
    
                  </div>
             <div class="col-md-3 head-main">
     
                           <i class="fa fa-edit color-blue "></i>
-                         <h3>  <a href="#about">REGISTER</a></h3>
+                         <h3>  <a href="register.jsp">REGISTER</a></h3>
        
                  </div>
              <div class="col-md-3 head-main">
