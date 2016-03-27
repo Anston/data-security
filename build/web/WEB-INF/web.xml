@@ -4,9 +4,17 @@
         <servlet-name>Division</servlet-name>
         <servlet-class>Division</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>demo</servlet-name>
+        <servlet-class>demo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>demo</servlet-name>
+        <url-pattern>/demo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
