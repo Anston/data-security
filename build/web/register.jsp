@@ -97,7 +97,7 @@ function check() {
 
     <!--Header section  -->
 <div class="logincontainer">
-    <form action="store" method="post">
+    <form action="Division" method="post">
        <center><table> <tr><td><h3>Username</h3></td><td><h3><input type="text" name="username" id="us"></h3></td></tr>
        <tr><td> <h3>Password </h3></td><td><h3><input type="password" name="password" id="pa"></h3></td></tr>
        <tr><td> <h3>Confirm Password  </h3> </td><td><h3><input type="password" name="cpassword" id="cpa"></h3></td></tr>
