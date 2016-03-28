@@ -12,6 +12,14 @@
         <servlet-name>NewServlet</servlet-name>
         <servlet-class>NewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>partition</servlet-name>
+        <servlet-class>partition</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shahash</servlet-name>
+        <servlet-class>shahash</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>partition</servlet-name>
+        <url-pattern>/partition</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shahash</servlet-name>
+        <url-pattern>/shahash</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

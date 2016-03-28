@@ -6,16 +6,20 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Shawn
  */
-public class NewServlet extends HttpServlet {
+public class shahash extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,14 +38,50 @@ public class NewServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
+            out.println("<title>Servlet shahash</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
+            
+           // int[][][] plaint=new int[5][5][5];
+            
+            String[][][] a=new String[5][5][5];
+            HttpSession session = request.getSession();
+            int[][][] plaint = (int[][][]) session.getAttribute("root");
+            int r1=plaint.length;
+            for (int i = 0; i < r1; i++) {
+                int r2=plaint[i].length;
+                for (int j = 0; j < r2; j++) {
+                    int r3=plaint[i][j].length;
+                    for (int k = 0; k < r3; k++) {
+                        if(plaint[i][j][k]!=0)
+                        a[i][j][k]= sha256(Integer.toString(plaint[i][j][k]));
+                        out.println("  a:" + a[i][j][k]);
+                    }
+                    out.println(" <br>");
+                }out.println(" <br>");
+            }
             out.println("</body>");
             out.println("</html>");
         }
     }
+    
+    public static String sha256(String base) {
+    try{
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] hash = digest.digest(base.getBytes("UTF-8"));
+        StringBuilder hexString = new StringBuilder();
+
+        for (int i = 0; i < hash.length; i++) {
+            String hex = Integer.toHexString(0xff & hash[i]);
+            if(hex.length() == 1) hexString.append('0');
+            hexString.append(hex);
+        }
+
+        return hexString.toString();
+    } catch(NoSuchAlgorithmException | UnsupportedEncodingException ex){
+       throw new RuntimeException(ex);
+    }
+}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

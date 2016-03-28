@@ -7,10 +7,12 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -37,17 +39,15 @@ public class Division extends HttpServlet
         {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
+            out.println("<head>");            
             out.println("</head>");
             out.println("<body>");
-           
             int[] a={1,4,9,16,25};
             int i,c = 0,e,f = 0,x,m,n;
-            char passplit[][] = new char[5][25];
+            char passplit[][] = new char[5][5];
             int counter = 0;
-            String uname = "k";// request.getParameter("username");
-            String pass = "jhjhghy";//request.getParameter("password");
+            String uname = request.getParameter("username");
+            String pass = request.getParameter("password");
             char passw[]=pass.toCharArray();
             char split[]= new char[10];
             int b = pass.length();
@@ -103,23 +103,35 @@ public class Division extends HttpServlet
                 } 
           
       
-            for (int j = 0; j < 9; j++) {
-                out.println("<h1>f=" + f + "</h1>");
-            }
-       for (int j = 0; j < b-f+1; j+= f)
-       {    
+          /*  for (int j = 0; j < 9; j++) {
+          out.println("<h1>f=" + f + "</h1>");
+          }*/
+       for (int j = 0; j <= b-f+1; j+= f)
+       {   if(j+f<=b)
            split= Arrays.copyOfRange(passw,j,j + f);
-           
+           else  if (j+f-1<=b)
+           split= Arrays.copyOfRange(passw,j,j + f-1);
+           else if (j+f-2<=b)
+            split= Arrays.copyOfRange(passw,j,j + f-1);
+            
             
             for(i=0;i<split.length;i++)
             {
-            passplit[counter++][i]=split[i];
-            
-        out.println("<h1>split= " + split.length + "f="+f+"</h1>");}
+            passplit[counter][i]=split[i];
+            }
+            counter++;
        }
         out.println("</body>");
             out.println("</html>");
+            request.setAttribute("uname",uname);
+            request.setAttribute("divi",passplit);
+            request.setAttribute("pass",pass);
             
+            HttpSession session = request.getSession();
+  
+            session.setAttribute("split", passplit);
+            RequestDispatcher rd = request.getRequestDispatcher("partition");
+            rd.forward(request,response);
         }
     }
 
