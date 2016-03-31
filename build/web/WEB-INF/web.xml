@@ -20,6 +20,14 @@
         <servlet-name>shahash</servlet-name>
         <servlet-class>shahash</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>redirection</servlet-name>
+        <servlet-class>redirection</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>passtore</servlet-name>
+        <servlet-class>passtore</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>shahash</servlet-name>
         <url-pattern>/shahash</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>redirection</servlet-name>
+        <url-pattern>/redirection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>passtore</servlet-name>
+        <url-pattern>/passtore</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

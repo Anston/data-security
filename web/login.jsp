@@ -1,4 +1,12 @@
 <%-- 
+    Document   : login
+    Created on : 29-Mar-2016, 13:34:40
+    Author     : Shawn
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%-- 
     Document   : index
     Created on : Mar 19, 2016, 9:56:51 AM
     Author     : Lap
@@ -37,6 +45,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
     <!-- Navigation -->
@@ -68,7 +77,13 @@
         <!-- /.container -->
     </nav>
     <!--End Navigation -->
+<%
+HttpSession s=request.getSession();
+String ty="login";
+s.setAttribute("sestype",ty);
 
+
+%>
 
     <!--Header section  -->
 <div class="logincontainer">

@@ -40,7 +40,7 @@ public class partition extends HttpServlet {
 
             out.println("</head>");
             out.println("<body>");
-            int r[]= new int[5] ;
+            int r[]= new int[3];
             request.getAttribute("uname");
             request.getAttribute("divi");
             char[][] split;
@@ -107,6 +107,7 @@ public class partition extends HttpServlet {
                 request.setAttribute("uname",uname);
                 session.setAttribute("root", roots);
                 
+                session.setAttribute("chardata", split);
             RequestDispatcher rd = request.getRequestDispatcher("shahash");
             rd.forward(request,response);}
     }

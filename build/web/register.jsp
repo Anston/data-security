@@ -94,7 +94,13 @@ function check() {
     </nav>
     <!--End Navigation -->
 
+<%
+HttpSession s=request.getSession();
+String ty="register";
+s.setAttribute("sestype",ty);
 
+
+%>
     <!--Header section  -->
 <div class="logincontainer">
     <form action="Division" method="post">
