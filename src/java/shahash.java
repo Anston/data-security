@@ -7,8 +7,10 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import static java.lang.Character.isWhitespace;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -46,10 +48,12 @@ public class shahash extends HttpServlet {
             
             String[][][] a=new String[5][5][5];
             HttpSession session = request.getSession();
-            char[][] split = null;
-            
+            char[][] split = new char[5][5];
+            split=null;
+
            
             split=(char[][]) session.getAttribute("chardata");
+            
             int[][][] plaint = (int[][][]) session.getAttribute("root");
             int r1=plaint.length;
             for (int i = 0; i < r1; i++) {
@@ -58,9 +62,12 @@ public class shahash extends HttpServlet {
                     int r3=plaint[i][j].length;
                     for (int k = 0; k < r3; k++) {
                         if(plaint[i][j][k]!=0)
-                        {a[i][j][k]= sha256(Integer.toString(plaint[i][j][k]));
-                        out.println("data:"+split[i][j]+" <br> a:" + a[i][j][k]+"<br>");
-                    
+                        {
+                            a[i][j][k]= sha256(Integer.toString(plaint[i][j][k]));
+                            out.println("data:"+split[i][j]+" <br> a:" + a[i][j][k]+"<br>");
+                               
+                            
+                            
                         }
                     }
                     session.setAttribute("hashed",a);
@@ -69,6 +76,8 @@ public class shahash extends HttpServlet {
             }
             out.println("</body>");
             out.println("</html>");
+            //RequestDispatcher rd = request.getRequestDispatcher("redirection");
+           // rd.forward(request,response);
         }
     }
     

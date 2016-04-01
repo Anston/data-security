@@ -112,7 +112,7 @@ public class Division extends HttpServlet
            else  if (j+f-1<=b)
            split= Arrays.copyOfRange(passw,j,j + f-1);
            else if (j+f-2<=b)
-            split= Arrays.copyOfRange(passw,j,j + f-1);
+            split= Arrays.copyOfRange(passw,j,j + f-2);
             
             
             for(i=0;i<split.length;i++)
@@ -123,12 +123,12 @@ public class Division extends HttpServlet
        }
         out.println("</body>");
             out.println("</html>");
-            request.setAttribute("uname",uname);
-            request.setAttribute("divi",passplit);
-            request.setAttribute("pass",pass);
             
             HttpSession session = request.getSession();
-  
+            
+            session.setAttribute("f",f);
+            session.setAttribute("uname",uname);
+            session.setAttribute("pass",pass);
             session.setAttribute("split", passplit);
             RequestDispatcher rd = request.getRequestDispatcher("partition");
             rd.forward(request,response);

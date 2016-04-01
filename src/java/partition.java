@@ -41,16 +41,14 @@ public class partition extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             int r[]= new int[3];
-            request.getAttribute("uname");
-            request.getAttribute("divi");
-            char[][] split;
+            char[][] split=null;
             int pr=1,p;
             HttpSession session = request.getSession();
             split = (char[][]) session.getAttribute("split");
             char[] dr=new char[5];
             int[][][] roots=new int[5][5][5];
             int[] d=new int[5];
-            String uname = request.getParameter("uname");
+            String uname = (String)session.getAttribute("uname");
 
 
             /* int row = split.length;
@@ -104,7 +102,7 @@ public class partition extends HttpServlet {
                 
                 
           }
-                request.setAttribute("uname",uname);
+                session.setAttribute("uname",uname);
                 session.setAttribute("root", roots);
                 
                 session.setAttribute("chardata", split);

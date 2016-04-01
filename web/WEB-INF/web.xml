@@ -28,6 +28,10 @@
         <servlet-name>passtore</servlet-name>
         <servlet-class>passtore</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>check</servlet-name>
+        <servlet-class>check</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>passtore</servlet-name>
         <url-pattern>/passtore</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>check</servlet-name>
+        <url-pattern>/check</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
