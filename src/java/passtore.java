@@ -59,11 +59,14 @@ public class passtore extends HttpServlet {
             int dbno=(int)session.getAttribute("f");
             String[][] passw = null;
             int k=0;
+            String sql;
+            Statement s;
+            ResultSet rs;
             
             for (int i = 0; i < 5; i++) {
                 for (int j = 0; j < 5; j++) {
                     
-                    passw[i][j]=hashv[i][j][k]+hashv[i][j][k+1]+hashv[i][j][k+2]+hashv[i][j][k+3]+hashv[i][j][k+4];
+                    passw[i][j]= hashv[i][j][k].concat(hashv[i][j][k+1]).concat(hashv[i][j][k+2]).concat(hashv[i][j][k+3]).concat(hashv[i][j][k+4]);
                     
                     
                 }
@@ -75,12 +78,12 @@ public class passtore extends HttpServlet {
                         switch (dbno) {
                             case 1:
 
-                                String sql = "SELECT * FROM login WHERE username = ?";
+                                sql = "SELECT * FROM login WHERE username = ?";
                                 PreparedStatement preparedStatement = c1.prepareStatement(sql);
                                 preparedStatement.setString(1, userid);
 
-                                Statement s = c1.createStatement();
-                                ResultSet rs = preparedStatement.executeQuery();
+                                 s = c1.createStatement();
+                                 rs = preparedStatement.executeQuery();
 
                                 if (rs.next()) {
 
@@ -91,19 +94,100 @@ public class passtore extends HttpServlet {
                                     sql = "Insert into login values("+userid+","+passw[i][j]+")";
                                     preparedStatement = c1.prepareStatement(sql);
                                     preparedStatement.setString(1, userid);
+                                    s = c1.createStatement();
+                                    preparedStatement.executeQuery();
 
                                 }
                                 break;
                             case 2:
+                                     sql = "SELECT * FROM login WHERE username = ?";
+                                preparedStatement = c2.prepareStatement(sql);
+                                preparedStatement.setString(1, userid);
+
+                                 s = c2.createStatement();
+                                 rs = preparedStatement.executeQuery();
+
+                                if (rs.next()) {
+
+                                    out.println("The username is taken");
+
+                                } else {
+
+                                    sql = "Insert into login values("+userid+","+passw[i][j]+")";
+                                    preparedStatement = c2.prepareStatement(sql);
+                                    preparedStatement.setString(1, userid);
+                                    s = c2.createStatement();
+                                    preparedStatement.executeQuery();
+
+                                }
 
                                 break;
                             case 3:
+                                 sql = "SELECT * FROM login WHERE username = ?";
+                                preparedStatement = c3.prepareStatement(sql);
+                                preparedStatement.setString(1, userid);
+
+                                 s = c3.createStatement();
+                                 rs = preparedStatement.executeQuery();
+
+                                if (rs.next()) {
+
+                                    out.println("The username is taken");
+
+                                } else {
+
+                                    sql = "Insert into login values("+userid+","+passw[i][j]+")";
+                                    preparedStatement = c3.prepareStatement(sql);
+                                    preparedStatement.setString(1, userid);
+                                    s = c3.createStatement();
+                                    preparedStatement.executeQuery();
+                                }
 
                                 break;
                             case 4:
+                                sql = "SELECT * FROM login WHERE username = ?";
+                                preparedStatement = c4.prepareStatement(sql);
+                                preparedStatement.setString(1, userid);
+
+                                s = c4.createStatement();
+                                 rs = preparedStatement.executeQuery();
+
+                                if (rs.next()) {
+
+                                    out.println("The username is taken");
+
+                                } else {
+
+                                    sql = "Insert into login values("+userid+","+passw[i][j]+")";
+                                    preparedStatement = c4.prepareStatement(sql);
+                                    preparedStatement.setString(1, userid);
+                                    s = c4.createStatement();
+                                    preparedStatement.executeQuery();
+                                }
 
                                 break;
                             case 5:
+                                sql = "SELECT * FROM login WHERE username = ?";
+                                preparedStatement = c5.prepareStatement(sql);
+                                preparedStatement.setString(1, userid);
+
+                                 s = c5.createStatement();
+                                 rs = preparedStatement.executeQuery();
+
+                                if (rs.next()) {
+
+                                    out.println("The username is taken");
+
+                                } else {
+
+                                    sql = "Insert into login values("+userid+","+passw[i][j]+")";
+                                    preparedStatement = c5.prepareStatement(sql);
+                                    preparedStatement.setString(1, userid);
+                                    s = c5.createStatement();
+                                    preparedStatement.executeQuery();
+                                    
+                                    
+                                }
 
                                 break;
                             default:

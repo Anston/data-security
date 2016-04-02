@@ -64,20 +64,18 @@ public class shahash extends HttpServlet {
                         if(plaint[i][j][k]!=0)
                         {
                             a[i][j][k]= sha256(Integer.toString(plaint[i][j][k]));
+                            if(split[i][j] != 0)
                             out.println("data:"+split[i][j]+" <br> a:" + a[i][j][k]+"<br>");
-                               
-                            
-                            
                         }
                     }
                     session.setAttribute("hashed",a);
-                    out.println(" <br><br>");
+                    out.println(" <br>_______________________________<br>");
                 }out.println(" <br>");
             }
             out.println("</body>");
             out.println("</html>");
-            //RequestDispatcher rd = request.getRequestDispatcher("redirection");
-           // rd.forward(request,response);
+   //         RequestDispatcher rd = request.getRequestDispatcher("redirection");
+   //         rd.forward(request,response);
         }
     }
     
