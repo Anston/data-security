@@ -8,6 +8,30 @@
         <servlet-name>demo</servlet-name>
         <servlet-class>demo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>NewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>partition</servlet-name>
+        <servlet-class>partition</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>shahash</servlet-name>
+        <servlet-class>shahash</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>redirection</servlet-name>
+        <servlet-class>redirection</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>passtore</servlet-name>
+        <servlet-class>passtore</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>check</servlet-name>
+        <servlet-class>check</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
@@ -15,6 +39,30 @@
     <servlet-mapping>
         <servlet-name>demo</servlet-name>
         <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>partition</servlet-name>
+        <url-pattern>/partition</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>shahash</servlet-name>
+        <url-pattern>/shahash</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>redirection</servlet-name>
+        <url-pattern>/redirection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>passtore</servlet-name>
+        <url-pattern>/passtore</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>check</servlet-name>
+        <url-pattern>/check</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -38,9 +38,11 @@ function check() {
              if(c.value!="")
                 {if (p.value == c.value)
                  {
-              
+                     if(p.value.length>5)
+                     {
                     return true;
-                 }else {window.alert("Passwords do not match");return false;}
+                 }else {window.alert("Passwords must be more than 5 characters");return false;}
+             }else {window.alert("Passwords do not match");return false;}
                 }else{window.alert("Confirm password");return false;}
             }else{window.alert("Enter password");return false;}
         }else{window.alert("Enter username");return false;}
@@ -94,10 +96,16 @@ function check() {
     </nav>
     <!--End Navigation -->
 
+<%
+HttpSession s=request.getSession();
+String ty="register";
+s.setAttribute("sestype",ty);
 
+
+%>
     <!--Header section  -->
 <div class="logincontainer">
-    <form action="store" method="post">
+    <form action="Division" method="post">
        <center><table> <tr><td><h3>Username</h3></td><td><h3><input type="text" name="username" id="us"></h3></td></tr>
        <tr><td> <h3>Password </h3></td><td><h3><input type="password" name="password" id="pa"></h3></td></tr>
        <tr><td> <h3>Confirm Password  </h3> </td><td><h3><input type="password" name="cpassword" id="cpa"></h3></td></tr>

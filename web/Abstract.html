@@ -54,7 +54,7 @@
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                   <li><a href="homepage.jsp">HOME</a>
+                    <li><a href="homepage.jsp">HOME</a>
                     </li>
                     <li><a href="login.html">LOGIN</a>
                     </li>
@@ -71,14 +71,23 @@
 
 
     <!--Header section  -->
-<div class="logincontainer">
-    <form action="Divison.java" method="post">
-       <center> <h3>Username <input type="text" name="username"><h3>
-        <h3>Password <input type="password" name="pass"><h3>
-        <input type="submit" value="Login">
-           </center> </form></div>
-	
-    <!--End Header section  -->
+             <div>
+                 <br><br><br>
+          <center><h2>Abstract</h2></center>
+<div style="font: times new roman; font-size: 12pt; padding-left: 50px; padding-right: 50px; text-indent: 50px;"><p>With the introduction of the computer, the dependency on computer systems for various functionalities has increased. The early computer that ran simple applications did not need much security as only trained personnel would be able to use it.
+    The transition of the computer as a business machine to homes increased the number of users.
+    In recent times the cases of cyber theft have increased.
+    Many popular websites used by thousands of people have been hacked and their passwords leaked.
+    The usual method of registration involves selecting a username and assigning a password to it.
+    The password and username are stored in the database in an encoded format. 
+    If the database is hacked, the hacker retrieves the encoded data into his system and he only needs to try out the different decoding methods available before finding out the plaintext. Thus the job of a hacker is easier after he retrieves the encoded data from the database. 
+    This paper puts forth a method to provide an additional layer of security even after the encrypted data is retrieved from a database. A hacked table contains hash values encrypted using MD-5 or other similar algorithms. The Hash value is not easily decrypted using traditional methods. But with the advent of rainbow tables it takes lesser time to find the decrypted value of the hash function. During authentication of the user details the username and password are enter as it is done traditionally. 
+    The system uses the username and hashes it accordingly and finds the match in the database.
+    This may be extra work during normal authentication but provides security if the database is breached. 
+    Even if the encoding method is known, the hacker will not be able to find out the username password combinations easily. 
+    In a website having large number of users there is a very large possible combination of usernames. The hacker has to find the actual usernames and passwords in this list of possible combinations. This method is effective only for general security of user details. If a specific user is targeted and the username of the user id known by the hacker beforehand it is not as effective but provides better protection as the exact hash cannot be obtained even with a part of the username.
+</p></div></div>
+<!--End Header section  -->
 
 
     
