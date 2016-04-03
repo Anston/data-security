@@ -73,8 +73,9 @@ public class partition extends HttpServlet {
                 { 
                   r[0]=17;
                   r[i]= dr[i]%r[0];  // choose k-1 roots randomly
-                  
-                  pr=pr*r[i];
+                  if(r[i]==0)
+                      r[i]=2;
+                  pr=r[0]*r[i];
                 }
 
 
