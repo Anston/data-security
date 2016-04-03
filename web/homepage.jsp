@@ -74,7 +74,7 @@
    <center> <div class="container" id="home">
         <div class="row text-center ">
              <div class="col-md-3 head-main ">             
-                            <a href="Abstract.html"><i class="fa fa-bell color-blue "></i>
+                            <a href="Abstract.html"><i class="fa fa-file-text-o color-blue "></i>
                          <h3>  ABSTRACT</h3></a>
    
                  </div>
@@ -86,7 +86,7 @@
                  </div>
              <div class="col-md-3 head-main">
 
-                        <a href="login.jsp"><i class="fa fa-globe color-blue "></i>
+                        <a href="login.jsp"><i class="fa fa-unlock-alt color-blue "></i>
                          <h3>  LOGIN</h3></a>
           
                  </div>
