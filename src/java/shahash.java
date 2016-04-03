@@ -69,7 +69,6 @@ public class shahash extends HttpServlet {
                         }
                     }
                     session.setAttribute("hashed",a);
-                    out.println(" <br>_______________________________<br>");
                 }out.println(" <br>");
             }
             out.println("</body>");

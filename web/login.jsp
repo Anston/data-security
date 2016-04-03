@@ -12,7 +12,7 @@
     Author     : Lap
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 
 <!DOCTYPE html>
@@ -31,6 +31,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
     <title></title>
+     <script>
+function logcheck() {
+    
+    var u=document.getElementById("lun");
+    var p=document.getElementById("lpw");
+     
+        if(u.value!="")
+        {
+         if(p.value!="")
+            {
+                           return true;
+                }
+            else
+            {
+                window.alert("Enter password");return false;
+            }
+        }
+        else
+        {
+            window.alert("Enter username");return false;
+        }
+    
+
+}
+</script>
     <!--REQUIRED STYLE SHEETS-->
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -45,7 +70,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
+   
 </head>
 <body>
     <!-- Navigation -->
@@ -88,9 +113,9 @@ s.setAttribute("sestype",ty);
     <!--Header section  -->
 <div class="logincontainer">
     <form action="Divison.java" method="post">
-       <center> <h3>Username <input type="text" name="username"><h3>
-        <h3>Password <input type="password" name="pass"><h3>
-        <input type="submit" value="Login">
+        <center> <h3>Username <input type="text" name="username" id="lun"><h3>
+                    <h3>Password <input type="password" name="pass" id="lpw"><h3>
+        <input type="submit" value="Login" onClick="return logcheck()">
            </center> </form></div>
 	
     <!--End Header section  -->
