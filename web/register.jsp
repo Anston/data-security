@@ -38,9 +38,11 @@ function check() {
              if(c.value!="")
                 {if (p.value == c.value)
                  {
-              
+                     if(p.value.length>5)
+                     {
                     return true;
-                 }else {window.alert("Passwords do not match");return false;}
+                 }else {window.alert("Passwords must be more than 5 characters");return false;}
+             }else {window.alert("Passwords do not match");return false;}
                 }else{window.alert("Confirm password");return false;}
             }else{window.alert("Enter password");return false;}
         }else{window.alert("Enter username");return false;}

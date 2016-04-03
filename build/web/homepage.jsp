@@ -74,20 +74,20 @@
    <center> <div class="container" id="home">
         <div class="row text-center ">
              <div class="col-md-3 head-main ">             
-                            <i class="fa fa-bell color-blue "></i>
-                         <h3>  <a href="# ">HOME</a></h3>
+                            <a href="Abstract.html"><i class="fa fa-file-text-o color-blue "></i>
+                         <h3>  ABSTRACT</h3></a>
    
                  </div>
             <div class="col-md-3 head-main">
     
-                          <i class="fa fa-edit color-blue "></i>
-                         <h3>  <a href="register.jsp">REGISTER</a></h3>
+                          <a href="register.jsp"><i class="fa fa-edit color-blue " style="padding-left: 21px;"></i>
+                         <h3>  REGISTER</h3></a>
        
                  </div>
              <div class="col-md-3 head-main">
 
-                        <i class="fa fa-globe color-blue "></i>
-                         <h3>  <a href="login.jsp">LOGIN</a></h3>
+                        <a href="login.jsp"><i class="fa fa-unlock-alt color-blue "></i>
+                         <h3>  LOGIN</h3></a>
           
                  </div>
              
@@ -112,17 +112,3 @@
 
 </body>
 </html>
-=======
-    </br></br></br></br></br></br></br>
-   <center>
-        <a href="login.jsp">
-            <button>Login </button>
-        </a>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="register.jsp">
-            <button>Register </button>
-        </a>
-          </center>
-</body>
-</html>
->>>>>>> refs/remotes/origin/shawn
