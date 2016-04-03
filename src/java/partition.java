@@ -69,9 +69,10 @@ public class partition extends HttpServlet {
                 }
 
 
-                for(int i=0;i<2;i++)
-                {
-                  r[i]= partition.randInt();  // choose k-1 roots randomly
+                for(int i=1;i<2;i++)
+                { 
+                  r[0]=17;
+                  r[i]= dr[i]%r[0];  // choose k-1 roots randomly
                   
                   pr=pr*r[i];
                 }
@@ -88,7 +89,8 @@ public class partition extends HttpServlet {
                   {r[2] = (d[i]*1000/pr)%p;   // find kth root
                   out.println("<br><br><br>data:"+d[i]);}
                 for(int k=0;k<3;k++)
-                { roots[count][i][k]=r[k];
+                { 
+                roots[count][i][k]=r[k];
                 if(d[i]!=0)
                 {
                 out.println("<br>roots:"+roots[count][i][k]);
@@ -99,15 +101,14 @@ public class partition extends HttpServlet {
 
                 out.println("</body>");
                 out.println("</html>");
-                
-                
           }
                 session.setAttribute("uname",uname);
                 session.setAttribute("root", roots);
                 
-                session.setAttribute("chardata", split);
+            session.setAttribute("chardata", split);
             RequestDispatcher rd = request.getRequestDispatcher("shahash");
-            rd.forward(request,response);}
+            rd.forward(request,response);
+        }
     }
 
 
