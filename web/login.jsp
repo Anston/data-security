@@ -114,7 +114,7 @@ s.setAttribute("sestype",ty);
 <div class="logincontainer">
     <form action="Divison.java" method="post">
         <center> <h3>Username <input type="text" name="username" id="lun"><h3>
-                    <h3>Password <input type="password" name="pass" id="lpw"><h3>
+                    <h3>Password <input type="password" name="password" id="lpw"><h3>
         <input type="submit" value="Login" onClick="return logcheck()">
            </center> </form></div>
 	

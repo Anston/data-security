@@ -6,18 +6,18 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Shawn
- */
-public class redirection extends HttpServlet {
+public class passcheck extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,27 +36,20 @@ public class redirection extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet redirection</title>");            
+            out.println("<title>Login check</title>");            
             out.println("</head>");
             out.println("<body>");
+            Connection c1=DriverManager.getConnection("jdbc:derby://localhost:1527/Hash1","ad","ad");
+            Connection c2=DriverManager.getConnection("jdbc:derby://localhost:1527/hash2","ad","ad");
+            Connection c3=DriverManager.getConnection("jdbc:derby://localhost:1527/Hash3","ad","ad");
+            Connection c4=DriverManager.getConnection("jdbc:derby://localhost:1527/Hash4","ad","ad");
+            Connection c5=DriverManager.getConnection("jdbc:derby://localhost:1527/Hash5","ad","ad");
             
             HttpSession session = request.getSession();
-            String ses=(String) session.getAttribute("sestype");
-            
-            if("register".equals(ses))
-            {
-                
-            RequestDispatcher rd = request.getRequestDispatcher("passtore");
-            rd.forward(request,response);
-            }
-            else if("login".equals(ses))
-            {
-                
-            RequestDispatcher rd = request.getRequestDispatcher("passcheck");
-            rd.forward(request,response);
-            }
             out.println("</body>");
             out.println("</html>");
+        } catch (SQLException ex) {
+            Logger.getLogger(passcheck.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
