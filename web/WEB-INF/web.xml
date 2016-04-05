@@ -21,10 +21,6 @@
         <servlet-class>shahash</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>redirection</servlet-name>
-        <servlet-class>redirection</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>passtore</servlet-name>
         <servlet-class>passtore</servlet-class>
     </servlet>
@@ -37,12 +33,12 @@
         <servlet-class>passcheck</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>redirect</servlet-name>
-        <servlet-class>redirection</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>passto</servlet-name>
         <servlet-class>passto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>redirec</servlet-name>
+        <servlet-class>redirec</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
@@ -65,10 +61,6 @@
         <url-pattern>/shahash</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>redirection</servlet-name>
-        <url-pattern>/redirection</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>passtore</servlet-name>
         <url-pattern>/passtore</url-pattern>
     </servlet-mapping>
@@ -81,12 +73,12 @@
         <url-pattern>/passcheck</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>redirect</servlet-name>
-        <url-pattern>/redirect</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>passto</servlet-name>
         <url-pattern>/passto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>redirec</servlet-name>
+        <url-pattern>/redirec</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

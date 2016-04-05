@@ -49,14 +49,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">DIVIDED PASSWORD HASHING </a>
+                <a class="navbar-brand" href="homepage.jsp">DIVIDED PASSWORD HASHING </a>
             </div>
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="homepage.jsp">HOME</a>
                     </li>
-                    <li><a href="login.html">LOGIN</a>
+                    <li><a href="login.jsp">LOGIN</a>
                     </li>
                     <li><a href="register.jsp">REGISTRATION</a>
                     </li>

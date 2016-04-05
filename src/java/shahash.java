@@ -73,7 +73,7 @@ public class shahash extends HttpServlet {
             }
             out.println("</body>");
             out.println("</html>");
-           RequestDispatcher rd = request.getRequestDispatcher("redirect");
+           RequestDispatcher rd = request.getRequestDispatcher("redirec");
           rd.forward(request,response);
           
         }

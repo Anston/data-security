@@ -492,7 +492,6 @@ public class passto extends HttpServlet {
             }
             }
             
-            out.println("Entered successfully");
             out.println("</body>");
             out.println("</html>");
         } catch (SQLException ex) {

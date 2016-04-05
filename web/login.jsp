@@ -34,8 +34,8 @@
      <script>
 function logcheck() {
     
-    var u=document.getElementById("lun");
-    var p=document.getElementById("lpw");
+    var u=document.getElementById("os");
+    var p=document.getElementById("pa");
      
         if(u.value!="")
         {
@@ -83,14 +83,14 @@ function logcheck() {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">DIVIDED PASSWORD HASHING </a>
+                <a class="navbar-brand" href="homepage.jsp">DIVIDED PASSWORD HASHING </a>
             </div>
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                    <li><a href="homepage.jsp">HOME</a>
                     </li>
-                    <li><a href="login.html">LOGIN</a>
+                    <li><a href="login.jsp">LOGIN</a>
                     </li>
                     <li><a href="register.jsp">REGISTRATION</a>
                     </li>
@@ -104,6 +104,7 @@ function logcheck() {
     <!--End Navigation -->
 <%
 HttpSession s=request.getSession();
+
 String ty="login";
 s.setAttribute("sestype",ty);
 
@@ -112,10 +113,21 @@ s.setAttribute("sestype",ty);
 
     <!--Header section  -->
 <div class="logincontainer">
-    <form action="Divison.java" method="post">
-        <center> <h3>Username <input type="text" name="username" id="lun"><h3>
-                    <h3>Password <input type="password" name="password" id="lpw"><h3>
-        <input type="submit" value="Login" onClick="return logcheck()">
+        <form action="Division" method="post">
+       <center><table> <tr><td><h3>Username</h3></td><td><h3><input type="text" name="username" id="us"></h3></td></tr>
+       <tr><td> <h3>Password </h3></td><td><h3><input type="password" name="password" id="pa"></h3></td></tr>
+       
+        </table><input type="submit" value="Login" onClick="return logcheck()"><br>
+        <%
+        String erro=(String)request.getAttribute("loginError");
+        if(erro=="Incorrect password")
+        { %>
+        
+        <h4>Please check Username and Password</h4>
+  
+       <% }   
+       %>
+        
            </center> </form></div>
 	
     <!--End Header section  -->

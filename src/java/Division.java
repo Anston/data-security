@@ -43,7 +43,7 @@ public class Division extends HttpServlet
             out.println("</head>");
             out.println("<body>");
             int[] a={1,4,9,16,25};
-            int i,c = 0,e,f = 0,x,m,n;
+            int i,c = 0,e,f = 0,m,n;
             char passplit[][] = new char[5][5];
             int counter = 0;
             String uname = request.getParameter("username");
