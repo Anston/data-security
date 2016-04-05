@@ -36,6 +36,14 @@
         <servlet-name>passcheck</servlet-name>
         <servlet-class>passcheck</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>redirect</servlet-name>
+        <servlet-class>redirection</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>passto</servlet-name>
+        <servlet-class>passto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>passcheck</servlet-name>
         <url-pattern>/passcheck</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>redirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>passto</servlet-name>
+        <url-pattern>/passto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

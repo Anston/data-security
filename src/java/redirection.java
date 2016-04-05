@@ -46,7 +46,7 @@ public class redirection extends HttpServlet {
             if("register".equals(ses))
             {
                 
-            RequestDispatcher rd = request.getRequestDispatcher("passtore");
+            RequestDispatcher rd = request.getRequestDispatcher("passto");
             rd.forward(request,response);
             }
             else if("login".equals(ses))

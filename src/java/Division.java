@@ -121,15 +121,18 @@ public class Division extends HttpServlet
             }
             counter++;
        }
+       int passl =b/f;
+       
         out.println("</body>");
             out.println("</html>");
             
             HttpSession session = request.getSession();
-            
             session.setAttribute("f",f);
             session.setAttribute("uname",uname);
             session.setAttribute("pass",pass);
+            session.setAttribute("passl",passl);
             session.setAttribute("split", passplit);
+            
             RequestDispatcher rd = request.getRequestDispatcher("partition");
             rd.forward(request,response);
         }
