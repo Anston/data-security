@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Shawn
  */
-public class redirection extends HttpServlet {
+public class redirec extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,23 +36,22 @@ public class redirection extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet redirection</title>");            
+            out.println("<title>Servlet redirec</title>");            
             out.println("</head>");
             out.println("<body>");
-            
             HttpSession session = request.getSession();
             String ses=(String) session.getAttribute("sestype");
             
             if("register".equals(ses))
             {
                 
-            RequestDispatcher rd = request.getRequestDispatcher("passtore");
+            RequestDispatcher rd = request.getRequestDispatcher("passto");
             rd.forward(request,response);
             }
             else if("login".equals(ses))
             {
                 
-            RequestDispatcher rd = request.getRequestDispatcher("psscheck");
+            RequestDispatcher rd = request.getRequestDispatcher("passcheck");
             rd.forward(request,response);
             }
             out.println("</body>");

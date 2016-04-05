@@ -43,7 +43,7 @@ public class Division extends HttpServlet
             out.println("</head>");
             out.println("<body>");
             int[] a={1,4,9,16,25};
-            int i,c = 0,e,f = 0,x,m,n;
+            int i,c = 0,e,f = 0,m,n;
             char passplit[][] = new char[5][5];
             int counter = 0;
             String uname = request.getParameter("username");
@@ -121,15 +121,18 @@ public class Division extends HttpServlet
             }
             counter++;
        }
+       int passl =b/f;
+       
         out.println("</body>");
             out.println("</html>");
             
             HttpSession session = request.getSession();
-            
             session.setAttribute("f",f);
             session.setAttribute("uname",uname);
             session.setAttribute("pass",pass);
+            session.setAttribute("passl",passl);
             session.setAttribute("split", passplit);
+            
             RequestDispatcher rd = request.getRequestDispatcher("partition");
             rd.forward(request,response);
         }
