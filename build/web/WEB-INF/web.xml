@@ -44,6 +44,10 @@
         <servlet-name>usercheck</servlet-name>
         <servlet-class>usercheck</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>userchec</servlet-name>
+        <servlet-class>userchec</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Division</servlet-name>
         <url-pattern>/Division</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>usercheck</servlet-name>
         <url-pattern>/usercheck</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userchec</servlet-name>
+        <url-pattern>/userchec</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

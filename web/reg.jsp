@@ -1,10 +1,18 @@
 <%-- 
+    Document   : login
+    Created on : 29-Mar-2016, 13:34:40
+    Author     : Shawn
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%-- 
     Document   : index
     Created on : Mar 19, 2016, 9:56:51 AM
     Author     : Lap
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 
 <!DOCTYPE html>
@@ -23,34 +31,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
     <title></title>
-    <script>
-function check() {
     
-    var u=document.getElementById("us");
-    var p=document.getElementById("pa");
-    var c=document.getElementById("cpa");
-    
-    
-        if(u.value!="")
-        {
-         if(p.value!="")
-            {
-             if(c.value!="")
-                {if (p.value == c.value)
-                 {
-                     if(p.value.length>5)
-                     {
-                    return true;
-                 }else {window.alert("Passwords must be more than 5 characters");return false;}
-             }else {window.alert("Passwords do not match");return false;}
-                }else{window.alert("Confirm password");return false;}
-            }else{window.alert("Enter password");return false;}
-        }else{window.alert("Enter username");return false;}
-    
-
-}
-</script>
-    <!--REQUIRED STYLE SHEETS-->
+    <!--R>EQUIRED STYLE SHEETS-->
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLE CSS -->
@@ -64,6 +46,7 @@ function check() {
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+   
 </head>
 <body>
     <!-- Navigation -->
@@ -81,9 +64,9 @@ function check() {
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="homepage.jsp">HOME</a>
+                   <li><a href="homepage.jsp">HOME</a>
                     </li>
-                    <li><a href="login.jsp">LOGIN</a>
+                    <li><a href="login.html">LOGIN</a>
                     </li>
                     <li><a href="register.jsp">REGISTRATION</a>
                     </li>
@@ -95,32 +78,12 @@ function check() {
         <!-- /.container -->
     </nav>
     <!--End Navigation -->
-
-<%
-HttpSession s=request.getSession();
-String ty="register";
-s.setAttribute("sestype",ty);
-
-
-%>
     <!--Header section  -->
 <div class="logincontainer">
-    <form action="userchec" method="post">
-       <center><table> <tr><td><h3>Username</h3></td><td><h3><input type="text" name="username" id="us"></h3></td></tr>
-       <tr><td> <h3>Password </h3></td><td><h3><input type="password" name="password" id="pa"></h3></td></tr>
-       <tr><td> <h3>Confirm Password  </h3> </td><td><h3><input type="password" name="cpassword" id="cpa"></h3></td></tr>
-        </table><input type="submit" value="Register" onClick="return check()"><br>
-        
-         <%
-        String erro=(String)request.getAttribute("Regn");
-        if(erro=="Username exists")
-        { %>
-        
-        <h4>Username is taken</h4>
-  
-       <% }   
-       %>
-           </center> </form></div>
+    
+    <center> <h1> Registered Successfully </h1></center>
+
+</div>
 	
     <!--End Header section  -->
 

@@ -46,8 +46,8 @@ public class Division extends HttpServlet
             int i,c = 0,e,f = 0,m,n;
             char passplit[][] = new char[5][5];
             int counter = 0;
-            String uname = request.getParameter("username");
-            String pass = request.getParameter("password");
+            String uname =(String) request.getAttribute("username");
+            String pass =(String) request.getAttribute("password");
             char passw[]=pass.toCharArray();
             char split[]= new char[10];
             int b = pass.length();

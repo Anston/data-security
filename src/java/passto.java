@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -491,7 +492,8 @@ public class passto extends HttpServlet {
 
             }
             }
-            
+            RequestDispatcher rd = request.getRequestDispatcher("reg.jsp");
+          rd.forward(request,response);
             out.println("</body>");
             out.println("</html>");
         } catch (SQLException ex) {
