@@ -9,4 +9,4 @@ Password Division and Security Provision
 
 3.SHA hashing (100% done)
 
-4.DB Storage (95% done)
+4.DB Storage (100% done)
