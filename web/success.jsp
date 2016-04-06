@@ -1,10 +1,18 @@
 <%-- 
+    Document   : login
+    Created on : 29-Mar-2016, 13:34:40
+    Author     : Shawn
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%-- 
     Document   : index
     Created on : Mar 19, 2016, 9:56:51 AM
     Author     : Lap
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 
 <!DOCTYPE html>
@@ -23,7 +31,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
     <title></title>
-    <!--REQUIRED STYLE SHEETS-->
+    
+    <!--R>EQUIRED STYLE SHEETS-->
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLE CSS -->
@@ -37,6 +46,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+   
 </head>
 <body>
     <!-- Navigation -->
@@ -54,9 +64,9 @@
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="homepage.jsp">HOME</a>
+                   <li><a href="homepage.jsp">HOME</a>
                     </li>
-                    <li><a href="login.jsp">LOGIN</a>
+                    <li><a href="login.html">LOGIN</a>
                     </li>
                     <li><a href="register.jsp">REGISTRATION</a>
                     </li>
@@ -68,32 +78,13 @@
         <!-- /.container -->
     </nav>
     <!--End Navigation -->
-
-
     <!--Header section  -->
-   <center> <div class="container" id="home">
-        <div class="row text-center ">
-             <div class="col-md-3 head-main ">             
-                            <a href="Abstract.html"><i class="fa fa-file-text-o color-blue "></i>
-                         <h3>  ABSTRACT</h3></a>
-   
-                 </div>
-            <div class="col-md-3 head-main">
+<div class="logincontainer">
     
-                          <a href="register.jsp"><i class="fa fa-edit color-blue " style="padding-left: 21px;"></i>
-                         <h3>  REGISTER</h3></a>
-       
-                 </div>
-             <div class="col-md-3 head-main">
+    <center> <h1> Authentication success </h1></center>
 
-                        <a href="login.jsp"><i class="fa fa-unlock-alt color-blue "></i>
-                         <h3>  LOGIN</h3></a>
-          
-                 </div>
-             
-          </div>
-    </div>
-	</center>
+</div>
+	
     <!--End Header section  -->
 
 
